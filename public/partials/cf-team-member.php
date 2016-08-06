@@ -4,22 +4,29 @@
 		<?php the_post_thumbnail( 'profile' ); ?>
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		<p>
-			<?php echo $position; ?>
+			<em><?php echo $position; ?></em>
 		</p>
 	</header><!-- .entry-header -->
 
-	<?php if ( ! empty( $twitter ) && '' !== $twitter ): ?>
-		<a href="<?php echo $twitter; ?>" class="twitter">
-			<span class="fa fa-twitter" aria-hidden="true"></span>
-			<span class="screen-reader-text"><?php echo $twitter_label; ?></span>
-		</a>
-	<?php endif; ?>
-
-	<?php if ( ! empty( $facebook ) && '' !== $facebook ): ?>
-		<a href="<?php echo $facebook; ?>" class="facebook">
-			<span class="fa fa-twitter" aria-hidden="true"></span>
-			<span class="screen-reader-text"><?php echo $facebook_label; ?></span>
-		</a>
+	<?php if ( $show_social ): ?>
+		<ul class="social-links">
+			<?php if ( ! empty( $facebook ) && '' !== $facebook ): ?>
+				<li>
+					<a href="<?php echo $facebook; ?>" class="facebook">
+						<?php include plugin_dir_path( dirname( __FILE__ ) ) . '/svg/facebook.svg'; ?>
+						<span class="screen-reader-text"><?php echo $facebook_label; ?></span>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if ( ! empty( $twitter ) && '' !== $twitter ): ?>
+				<li>
+					<a href="<?php echo $twitter; ?>" class="twitter">
+						<?php include plugin_dir_path( dirname( __FILE__ ) ) . '/svg/twitter.svg'; ?>
+						<span class="screen-reader-text"><?php echo $twitter_label; ?></span>
+					</a>
+				</li>
+			<?php endif; ?>
+		</ul>
 	<?php endif; ?>
 
 	<div id="member-bio-<?php the_ID(); ?>" class="member-bio">

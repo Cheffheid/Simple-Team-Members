@@ -1,4 +1,78 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+svg {
+  transition: all 0.3s linear;
+}
+
+.team_member {
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  width: 25%;
+}
+
+.team_member img {
+  margin-bottom: 1em;
+}
+
+.team_member header {
+  text-align: center;
+}
+
+.team_member h2,
+.team_member header p {
+  margin-bottom: 0.25em;
+}
+
+.team_member .entry-title {
+  font-size: 1.125em; /* 18 / 16 */
+}
+
+.social-links {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+}
+
+.social-links svg {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 2px;
+}
+
+.social-links .facebook svg {
+  background: #3C5A99;
+}
+
+.social-links .facebook:hover svg,
+.social-links .facebook:focus svg {
+  background: #1C2D51;
+}
+
+.social-links .twitter svg {
+  background: #1da1f2;
+}
+
+.social-links .twitter:hover svg,
+.social-links .twitter:focus svg {
+  background: #115884;
+}
+
+.member-bio {
+  padding: 1em;
+}
+
+.member-bio p {
+  font-size: 0.75em; /* 12 / 16 */
+}
+
+.member-bio p:last-child {
+  margin-bottom: 0;
+}

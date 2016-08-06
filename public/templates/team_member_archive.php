@@ -23,6 +23,12 @@
 						$twitter_label = sprintf( __('Twitter profile for %s'), get_the_title() );
 						$facebook_label = sprintf( __('Facebook profile for %s'), get_the_title() );
 
+						$show_social = false;
+
+						if ( (! empty( $twitter ) && '' !== $twitter) || ! empty( $facebook ) && '' !== $facebook ) {
+							$show_social = true;
+						}
+
 						// Team Member partial
 						include plugin_dir_path( dirname( __FILE__ ) ) . '/partials/cf-team-member.php';
 
