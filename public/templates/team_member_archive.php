@@ -11,11 +11,27 @@
 
 	    <?php
 
-				if ( have_posts() ) {
+				if ( get_query_var( 'paged' ) ) {
+					$paged = get_query_var( 'paged' );
+				} else {
+					$paged = 1;
+				}
+
+				$team_query_args = array(
+					'order_by'				=> 'title',
+					'order'						=> 'DESC',
+					'post_type'				=> 'team_member',
+					'posts_per_page'	=> 12,
+					'paged'						=> $paged,
+				);
+
+				$team_member_query = new WP_Query( $team_query_args );
+
+				if ( $team_member_query->have_posts() ) {
 
 					echo '<div class="team-members">';
 					// Start the Loop.
-					while ( have_posts() ) : the_post();
+					while ( $team_member_query->have_posts() ) : $team_member_query->the_post();
 
 						$position = get_post_meta( get_the_ID(), 'cf_team_member_position', true );
 						$twitter  = get_post_meta( get_the_ID(), 'cf_team_member_twitter', true );

@@ -102,7 +102,7 @@ button {
   background: #034e93;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 500px) and (max-width: 767px) {
   .team_member {
     float: left;
     margin-left: 0;
@@ -114,27 +114,24 @@ button {
     margin-right: 0;
   }
 
-  .team_member:nth-child(3n) {
+  .team_member:nth-child(2n+1) {
     clear: left;
   }
 }
 
 @media (min-width: 767px) {
   .team_member {
+    float: left;
+    margin-left: 0;
     margin-right: 3%;
     width: 30%;
   }
 
-  .team_member:nth-child(2n) {
-    margin-right: 3%;
-  }
-
   .team_member:nth-child(3n) {
-    clear: none;
     margin-right: 0;
   }
 
-  .team_member:nth-child(4n) {
+  .team_member:nth-child(3n+1) {
     clear: left;
   }
 }
