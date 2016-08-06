@@ -164,6 +164,7 @@ class Cf_Team_Members {
 
 		$this->loader->add_action( 'save_post', $plugin_admin, 'save_team_member_data' );
 
+		$this->loader->add_action( 'init', $plugin_admin, 'add_team_member_image_sizes' );
 	}
 
 	/**

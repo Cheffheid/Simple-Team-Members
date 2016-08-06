@@ -15,6 +15,14 @@
 
 					// Start the Loop.
 					while ( have_posts() ) : the_post();
+
+						$position = get_post_meta( get_the_ID(), 'cf_team_member_position', true );
+						$twitter  = get_post_meta( get_the_ID(), 'cf_team_member_twitter', true );
+						$facebook = get_post_meta( get_the_ID(), 'cf_team_member_facebook', true );
+
+						$twitter_label = sprintf( __('Twitter profile for %s'), get_the_title() );
+						$facebook_label = sprintf( __('Facebook profile for %s'), get_the_title() );
+
 						// Team Member partial
 						include plugin_dir_path( dirname( __FILE__ ) ) . '/partials/cf-team-member.php';
 

@@ -131,6 +131,10 @@ class Cf_Team_Members_Admin {
 
 	}
 
+	public function add_team_member_image_sizes() {
+		add_image_size( 'profile', 318, 180, false );
+	}
+
 	/**
 	 * Validates post type we're trying to save
 	 *
