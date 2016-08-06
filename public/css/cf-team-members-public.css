@@ -3,10 +3,10 @@ button {
   transition: all 0.3s linear;
 }
 
-.team-members {
+.team-members:after {
   content:" ";
-  display:table;
-  clear:both;
+  display: table;
+  clear: both;
 }
 
 .team_member {
