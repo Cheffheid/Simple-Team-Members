@@ -73,6 +73,12 @@ class Cf_Team_Members_Public {
 	public function enqueue_scripts() {
 		if ( is_post_type_archive ( 'team_member' ) ) {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cf-team-members-public.js', array( 'jquery' ), $this->version, false );
+
+			wp_localize_script( $this->plugin_name, 'TeamMemberScripti18n', array(
+				'read_more'    => __( 'Read More', 'cf-team-members' ),
+				'read_less'   => __( 'Read Less', 'cf-team-members' ),
+			) );
+
 		}
 	}
 

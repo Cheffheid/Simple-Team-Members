@@ -6,15 +6,15 @@ $(document).ready(function () {
     $('.team_member').each(function () {
       var $button = $('<button />');
 
-      $button.text('Read More');
+      $button.text(TeamMemberScripti18n.read_more);
 
       $button.click(function () {
         $($(this).parent().find('.member-bio')).slideToggle();
 
-        if ($(this).text() === 'Read More') {
-          $(this).text('Read Less');
+        if ($(this).text() === TeamMemberScripti18n.read_more) {
+          $(this).text(TeamMemberScripti18n.read_less);
         } else {
-          $(this).text('Read More');
+          $(this).text(TeamMemberScripti18n.read_more);
         }
       });
 
