@@ -50,7 +50,7 @@ class CF_Team_Member_CPT {
             'publicly_queryable' => true,
             'show_ui' => true,
             'query_var' => true,
-            'rewrite' => array('slug' => $this->type),
+            'rewrite' => array('slug' => strtolower( sanitize_title( $this->plural ) ) ),
             'capability_type' => 'post',
             'hierarchical' => true,
             'has_archive' => true,
