@@ -23,14 +23,17 @@
 class Cf_Team_Members_Activator {
 
 	/**
-	 * Short Description. (use period)
+	 * Function run during plugin activation
 	 *
-	 * Long Description.
+	 * Function run during plugin activation, currently only clears permalinks
 	 *
 	 * @since    1.0.0
 	 */
 	public static function activate() {
+		$team_members = new CF_Team_Member_CPT();
+		$team_members->register_post_type();
 
+		flush_rewrite_rules();
 	}
 
 }

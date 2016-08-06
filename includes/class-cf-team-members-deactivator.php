@@ -23,14 +23,14 @@
 class Cf_Team_Members_Deactivator {
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	* Function run during plugin activation
+	*
+	* Function run during plugin activation, currently only clears permalinks
 	 *
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		flush_rewrite_rules();
 	}
 
 }
