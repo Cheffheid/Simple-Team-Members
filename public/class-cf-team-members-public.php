@@ -61,18 +61,6 @@ class Cf_Team_Members_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Cf_Team_Members_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Cf_Team_Members_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cf-team-members-public.css', array(), $this->version, 'all' );
 
 	}
@@ -84,20 +72,23 @@ class Cf_Team_Members_Public {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Cf_Team_Members_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Cf_Team_Members_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cf-team-members-public.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+	/**
+	 *
+	 *
+	 * @since	1.0.0
+	 */
+	public function get_custom_team_member_archive_template( $archive_template ) {
+		global $post;
+
+		if ( is_post_type_archive ( 'team_member' ) ) {
+		    $archive_template = dirname( __FILE__ ) . '/templates/team_member_archive.php';
+		}
+
+		return $archive_template;
 	}
 
 }

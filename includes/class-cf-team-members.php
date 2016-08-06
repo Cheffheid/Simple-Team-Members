@@ -180,6 +180,8 @@ class Cf_Team_Members {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$this->loader->add_filter( 'archive_template', $plugin_public, 'get_custom_team_member_archive_template' );
+
 	}
 
 	/**
