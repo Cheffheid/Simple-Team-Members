@@ -13,9 +13,9 @@
  * @package           Cf_Team_Members
  *
  * @wordpress-plugin
- * Plugin Name:       CF Team Members
+ * Plugin Name:       Simple Team Members
  * Plugin URI:        https://jeffreydewit.com
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Adds a Team Member post type and an archive template for /team-members
  * Version:           1.0.0
  * Author:            Jeffrey de Wit
  * Author URI:        https://jeffreydewit.com
