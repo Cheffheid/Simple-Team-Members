@@ -12,9 +12,7 @@ button {
 .team_member {
   border: 1px solid #e1e1e1;
   border-radius: 2px;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0 1em 1em;
   padding-bottom: 1em;
   text-align: center;
 }
