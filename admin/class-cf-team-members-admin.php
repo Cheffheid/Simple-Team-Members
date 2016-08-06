@@ -111,7 +111,7 @@ class Cf_Team_Members_Admin {
 	public function save_team_member_data( $post_id ) {
 
 		if ( ! $this->is_valid_post_type( 'team_member' ) ||
-				 ! $this->user_can_save( $post_id, 'team_member_nonce', 'team_member_save' ) ) {
+			 ! $this->user_can_save( $post_id, 'team_member_nonce', 'team_member_save' ) ) {
         return;
     }
 
@@ -124,8 +124,8 @@ class Cf_Team_Members_Admin {
 				update_post_meta( $post_id, $textfield, $position );
 			} else {
 				if ( '' !== get_post_meta( $post_id, $textfield, true ) ) {
-		        delete_post_meta( $post_id, $textfield );
-		    }
+		    		delete_post_meta( $post_id, $textfield );
+		    	}
 			}
 		}
 
