@@ -119,9 +119,14 @@ class Cf_Team_Members_Admin {
 
 		foreach( $textfields as $textfield ) {
 			if ( ! empty( $_POST[$textfield] ) ) {
-				$position = sanitize_text_field( $_POST[$textfield] );
 
-				update_post_meta( $post_id, $textfield, $position );
+				if ( 'cf_team_member_position' === $textfield ) {
+					$sanitized = sanitize_text_field( $_POST[$textfield] );
+				} else {
+					$sanitized = esc_url( $_POST[$textfield] );
+				}
+
+				update_post_meta( $post_id, $textfield, $sanitized );
 			} else {
 				if ( '' !== get_post_meta( $post_id, $textfield, true ) ) {
 		    		delete_post_meta( $post_id, $textfield );
