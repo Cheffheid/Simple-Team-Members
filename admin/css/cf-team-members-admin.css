@@ -1,4 +1,10 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+#team_member_custom_fields label {
+   display: inline-block;
+   width: 100%;
+}
+
+@media (min-width: 782px) {
+   #team_member_custom_fields label {
+      width: 15%;
+   }
+}

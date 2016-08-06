@@ -20,7 +20,7 @@ class CF_Team_Member_CPT {
     public function __construct() {
         $this->single     = __('Team Member', 'cf-team-members');
         $this->plural     = __('Team Members', 'cf-team-members');
-        $this->type       = __('team-member', 'cf-team-members');
+        $this->type       = 'team_member';
         $this->dashicon   = 'dashicons-groups';
     }
 
