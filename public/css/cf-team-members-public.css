@@ -1,22 +1,35 @@
-svg {
+svg,
+button {
   transition: all 0.3s linear;
+}
+
+.team-members {
+  content:" ";
+  display:table;
+  clear:both;
 }
 
 .team_member {
   border: 1px solid #e1e1e1;
   border-radius: 2px;
-  width: 25%;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-bottom: 1em;
+  text-align: center;
 }
 
 .team_member img {
   margin-bottom: 1em;
+  height: 180px;
+  width: 100%;
 }
 
 .team_member header {
   text-align: center;
 }
 
-.team_member h2,
+.team_member .entry-title,
 .team_member header p {
   margin-bottom: 0.25em;
 }
@@ -67,6 +80,7 @@ svg {
 
 .member-bio {
   padding: 1em;
+  text-align: left;
 }
 
 .member-bio p {
@@ -75,4 +89,52 @@ svg {
 
 .member-bio p:last-child {
   margin-bottom: 0;
+}
+
+.team_member button {
+  background: #0072dc;
+  font-size: 0.75em;
+  text-transform: capitalize;
+}
+
+.team_member button:hover,
+.team_member button:focus {
+  background: #034e93;
+}
+
+@media (min-width: 500px) {
+  .team_member {
+    float: left;
+    margin-left: 0;
+    margin-right: 3%;
+    width: 47%;
+  }
+
+  .team_member:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .team_member:nth-child(3n) {
+    clear: left;
+  }
+}
+
+@media (min-width: 767px) {
+  .team_member {
+    margin-right: 3%;
+    width: 30%;
+  }
+
+  .team_member:nth-child(2n) {
+    margin-right: 3%;
+  }
+
+  .team_member:nth-child(3n) {
+    clear: none;
+    margin-right: 0;
+  }
+
+  .team_member:nth-child(4n) {
+    clear: left;
+  }
 }
